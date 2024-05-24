@@ -17,8 +17,8 @@ jobs:
         ruby-version: '2.7'
     - name: Install dependencies
       run: |
-        gem install bundler
-        bundle install
+        gem install bundler -v 2.4.22
+        bundle _2.4.22_ install
     - name: Build the site
       run: bundle exec jekyll build
     - name: Deploy to GitHub Pages
