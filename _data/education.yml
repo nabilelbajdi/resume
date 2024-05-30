@@ -2,11 +2,13 @@
 - degree: DevOps Engineer
   uni: Chas Academy	
   year: 2022 &mdash; 2024
-  awards: "Relevant coursework: IT Tech and Operations, DevOps, Database Management, System Development in Python, Linux/Unix Server and Bash Programming, Agile Project Management, The Modern Cloud."
+  summary: "Relevant coursework: IT Tech and Operations, DevOps, Database Management, System Development in Python, Linux/Unix Server and Bash Programming, Agile Project Management, The Modern Cloud."
 
 - degree: Natural Science Program with Specialization Leadership	
   uni: Internationella Engelska Gymnasiet Södermalm
   year: 2012 &mdash; 2015
-  award: 
-    - Chosen by my peers to represent the class in the student council's election committee.
-    - Earned a scholarship for a natural science degree project and collaborated with two co-writers on it.
+  summary: |
+    <ul class="resume-item-list">
+      <li>Chosen by my peers to represent the class in the student council's election committee.</li>
+      <li>Earned a scholarship for a natural science degree project and collaborated with two co-writers on it.</li>
+    </ul>
