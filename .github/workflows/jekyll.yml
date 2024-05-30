@@ -17,7 +17,7 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.1'
+        ruby-version: '2.7'
 
     - name: Install dependencies
       run: |
@@ -34,7 +34,7 @@ jobs:
       run: |
         gem install w3c_validators
         bundle exec jekyll build
-        vendor/bundle/ruby/3.1.0/bin/w3c_validators ./_site
+        vendor/bundle/ruby/2.7.0/bin/w3c_validators ./_site
 
     - name: Deploy to GitHub Pages
       if: success()
