@@ -27,11 +27,11 @@ jobs:
     - name: Build the site
       run: bundle exec jekyll build
 
-    - name: Link Validation
+    - name: HTML Validation
       continue-on-error: true
       run: |
         gem install html-proofer
-        bundle exec htmlproofer ./_site --url-ignore "/https:\/\/www.linkedin.com\/in\/nabil-el-bajdi-51726b24b/" || echo "Link validation errors detected. Check the report above."
+        bundle exec htmlproofer ./_site --check-external-hash --check-html --check_img_http --check_opengraph --check-favicon --url-ignore "/https:\/\/www.linkedin.com\/in\/nabil-el-bajdi-51726b24b/" || echo "HTML validation errors detected. Check the report above."
 
     - name: Deploy to GitHub Pages
       if: always()
