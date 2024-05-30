@@ -13,10 +13,19 @@
 - company: IKEA
   position: Co-Worker
   duration: Apr, 2018 &mdash; Present
-  summary: Summary <ul class="resume-item-list"><li>1</li><li>2</li><li>3</li></ul>
+  summary: |
+    <ul class="resume-item-list">
+      <li>Demonstrated effective problem-solving and decision-making skills in resolving customer issues through analytical thinking and appropriate solutions, resulting in high levels of customer satisfaction.</li>
+      <li>Worked effectively under pressure, as measured by consistently meeting customer demands during busy hours, by adapting to fast-paced work environments and remaining focused on the task at hand.</li>
+    </ul>
 
 # Web Content Writer at Body Bazar
 - company: Body Bazar
   position: Web Content Writer
   duration:  Jan, 2016 &mdash; Aug, 2019
-  summary: Summary
+  summary: |
+    <ul class="resume-item-list">
+      <li>Authored engaging and informative articles on topics related to the business, as well as product descriptions.</li>
+      <li>Optimized content for SEO by incorporating relevant keywords to boost the website's search engine visibility.</li>
+      <li>Collaborated with the team to create a content strategy tailored to the website's target audience and brand.</li>
+    </ul>
