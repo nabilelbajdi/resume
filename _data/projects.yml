@@ -1,8 +1,9 @@
 # Projects
 # uncomment the urls if you wish to display them, and add your own URL
 
-# jazznotes.io
-- project: YouTube Content Creator
+# YouTube
+- project: YouTube
+  role: Content Creator
   # url: "#"
   description: |
     <ul class="resume-item-list">
@@ -11,8 +12,9 @@
       <li>Enhanced my skills in video production and editing using software such as Sony Vegas, Photoshop and Audition.</li>
     </ul>
 
-# Springfield Community Outreach Group
-- project: Professional Swimmer
+# Swimmer
+- project: Swimming
+  role: Professional Swimmer
   # url: "#"
   description: |
     <ul class="resume-item-list">
