@@ -2,15 +2,20 @@
 # uncomment the urls if you wish to display them, and add your own URL
 
 # jazznotes.io
-- project: jazznotes.io
-  role: Founder & Primary Developer
-  duration: 2012 &mdash; Present
+- project: YouTube Content Creator
   # url: "#"
-  description: Jazz Notes is an open source node/ember app that helps you keep track of your music compositions and new ideas.
+  description: |
+    <ul class="resume-item-list">
+      <li>Created a YouTube channel, producing and uploading engaging videos on a regular basis.</li>
+      <li>Generated 900,000+ views on my videos with very positive feedback from the viewers.</li>
+      <li>Enhanced my skills in video production and editing using software such as Sony Vegas, Photoshop and Audition.</li>
+    </ul>
 
 # Springfield Community Outreach Group
-- project: Springfield Community Outreach Group
-  role: Co-Founder & Organizer
-  duration: 2007 &mdash; Present
+- project: Professional Swimmer
   # url: "#"
-  description: SCOG is a local monthly meetup in Springfield where we share opportunities to volunteer in the community and organize support for families and neighborhoods in need of assistance that the community can provide.
+  description: |
+    <ul class="resume-item-list">
+      <li>Participated in swimming competitions, achieving several victories and contributing to the success of the team.</li>
+      <li>Set challenging goals, developed strategies to effectively achieve them, and constantly evaluated and refined my performance; an experience that taught me the value of hard work, discipline, and persistence.</li>
+    </ul>
