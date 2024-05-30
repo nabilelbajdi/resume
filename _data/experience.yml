@@ -4,7 +4,11 @@
 - company: Scila
   position: DevOps Engineer Intern
   duration:   Nov, 2023  &mdash; Apr, 2024
-  summary: Summary
+  summary: |
+    <ul class="resume-item-list">
+      <li>Utilized a range of DevOps tools such as Linux, Git, Bash, Ansible, Jenkins, and Docker to automate and improve processes in team projects.</li>
+      <li>Applied Agile and Scrum methodologies, using JIRA for project tracking, to enhance team collaboration and project management.</li>
+    </ul>
   
 - company: IKEA
   position: Co-Worker
