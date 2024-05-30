@@ -1,0 +1,11 @@
+---
+check_external_hash: true
+checks:
+  - Images
+  - Links
+  - Scripts
+  - OpenGraph
+  - Favicon
+enforce_https: true
+url_ignore:
+  - "https://www.linkedin.com/in/nabil-el-bajdi-51726b24b/"
