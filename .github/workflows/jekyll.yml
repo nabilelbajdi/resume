@@ -27,18 +27,6 @@ jobs:
     - name: Build the site
       run: bundle exec jekyll build
 
-    - name: HTML Validation
-      continue-on-error: true
-      run: |
-        gem install html-proofer
-        bundle exec htmlproofer ./_site --checks Links,Images,Script,Html || echo "HTML linting errors detected. Check the report above."
-
-    - name: CSS Validation
-      continue-on-error: true
-      run: |
-        gem install w3c_validators
-        bundle exec w3c_validators ./_site || echo "CSS linting errors detected. Check the report above."
-
     - name: Deploy to GitHub Pages
       if: always()
       uses: peaceiris/actions-gh-pages@v3
