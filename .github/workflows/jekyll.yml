@@ -13,17 +13,33 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
+
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: '2.7'
+
     - name: Install dependencies
       run: |
         gem install bundler -v 2.4.22
         bundle _2.4.22_ install
+
     - name: Build the site
       run: bundle exec jekyll build
+
+    - name: HTML Validation
+      run: |
+        gem install html-proofer
+        htmlproofer ./_site --check-html
+
+    - name: CSS Validation
+      run: |
+        gem install w3c_validators
+        bundle exec jekyll build
+        vendor/bundle/ruby/2.7.0/bin/w3c_validators ./_site
+
     - name: Deploy to GitHub Pages
+      if: success()
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
