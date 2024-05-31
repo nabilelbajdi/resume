@@ -5,5 +5,6 @@ gem 'liquid', '~> 4.0'
 gem 'rexml'
 gem 'ffi', '~> 1.15'
 gem 'html-proofer'
+gem 'bundler-audit', require: false
 # This gem provides regeneration support improvements on Windows
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?

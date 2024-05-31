@@ -24,6 +24,10 @@ jobs:
         gem install bundler -v 2.4.22
         bundle _2.4.22_ install
 
+    - name: Security Audit
+      run: |
+        bundle exec bundler-audit check --update || echo "Security vulnerabilities detected. Check the report above."
+
     - name: Build the site
       run: bundle exec jekyll build
 
