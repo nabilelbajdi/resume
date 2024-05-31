@@ -37,6 +37,12 @@ jobs:
         gem install html-proofer
         bundle exec htmlproofer ./_site || echo "Link validation errors detected. Check the report above."
 
+    - name: Run Lighthouse CI
+      uses: treosh/lighthouse-ci-action@v8
+      with:
+        urls: 'https://nabilelbajdi.github.io/resume/'
+        uploadArtifacts: true
+
     - name: Deploy to GitHub Pages
       if: always()
       uses: peaceiris/actions-gh-pages@v3
