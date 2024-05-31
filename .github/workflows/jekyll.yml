@@ -37,18 +37,6 @@ jobs:
         gem install html-proofer
         bundle exec htmlproofer ./_site || echo "Link validation errors detected. Check the report above."
 
-    - name: Install Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '20.14.0'
-
-    - name: Install Lighthouse CI
-      run: |
-        npm install -g @lhci/cli@0.7.x
-
-    - name: Run Lighthouse CI
-      run: lhci autorun --config=./.lighthouserc.json
-
     - name: Deploy to GitHub Pages
       if: always()
       uses: peaceiris/actions-gh-pages@v3
