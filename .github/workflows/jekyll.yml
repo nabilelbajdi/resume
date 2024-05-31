@@ -14,28 +14,21 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.3.1'
+    - name: Build Docker image
+      run: docker build -t resume-template .
 
-    - name: Install dependencies
-      run: |
-        gem install bundler -v 2.4.22
-        bundle _2.4.22_ install
+    - name: Run Docker container
+      run: docker run -d --name resume-template -v "$PWD":/home/app -p 4000:4000 resume-template
 
     - name: Security Audit
       run: |
-        bundle exec bundler-audit check --update || echo "Security vulnerabilities detected. Check the report above."
-
-    - name: Build the site
-      run: bundle exec jekyll build
+        docker exec resume-template bundle exec bundler-audit check --update || echo "Security vulnerabilities detected. Check the report above."
 
     - name: Link Validation
       continue-on-error: true
       run: |
-        gem install html-proofer
-        bundle exec htmlproofer ./_site || echo "Link validation errors detected. Check the report above."
+        docker exec resume-template gem install html-proofer
+        docker exec resume-template bundle exec htmlproofer ./_site || echo "Link validation errors detected. Check the report above."
 
     - name: Deploy to GitHub Pages
       if: always()
@@ -44,3 +37,6 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./_site
         publish_branch: gh-pages
+
+    - name: Cleanup
+      run: docker stop resume-template && docker rm resume-template
