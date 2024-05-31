@@ -47,8 +47,7 @@ jobs:
         npm install -g @lhci/cli@0.7.x
 
     - name: Run Lighthouse CI
-      run: |
-        lhci autorun --upload.target=temporary-public-storage
+      run: lhci autorun --config=./.lighthouserc.json
 
     - name: Deploy to GitHub Pages
       if: always()
