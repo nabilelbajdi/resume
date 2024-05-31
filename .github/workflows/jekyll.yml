@@ -24,6 +24,11 @@ jobs:
       run: |
         docker exec resume-template bundle exec bundler-audit check --update || echo "Security vulnerabilities detected. Check the report above."
 
+    - name: Brakeman Security Check
+      run: |
+        docker exec resume-template gem install brakeman
+        docker exec resume-template bundle exec brakeman || echo "Static analysis detected security issues. Check the report above."
+
     - name: Link Validation
       continue-on-error: true
       run: |
