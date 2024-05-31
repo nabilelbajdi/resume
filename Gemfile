@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+ruby '3.3.1'
+gem 'nokogiri', '>= 1.16.5'
 gem 'jekyll', '~> 4.3.2'
 gem 'liquid', '~> 4.0'
 gem 'rexml'
