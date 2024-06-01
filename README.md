@@ -26,5 +26,3 @@ The CI/CD pipeline is automated using GitHub Actions. The pipeline includes the 
 - **Link Validation**: Ensures all links are valid using `html-proofer`.
 - **Lighthouse Audit**: Monitors performance and best practices of the website.
 
-The GitHub Actions configuration can be found in the [.github/workflows/jekyll.yml](./.github/workflows/jekyll.yml) file.
-
