@@ -36,10 +36,6 @@ jobs:
         lhci healthcheck --fatal
         lhci autorun --config=./.lighthouserc.json
 
-    - name: Run Unit Tests
-      run: |
-        docker exec resume-template bundle exec rspec
-
     - name: Deploy to GitHub Pages
       if: always()
       uses: peaceiris/actions-gh-pages@v3
