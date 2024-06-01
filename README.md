@@ -1,4 +1,4 @@
-Nabil El Bajdi's Resume 
+# Nabil El Bajdi's Resume 
 
 *This repository contains my personal resume built using a Jekyll template. I forked the original template from [resume-template](https://github.com/jglovier/resume-template) and personalized it, as well as adding several DevOps integrations.*
 
