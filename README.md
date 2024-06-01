@@ -1,28 +1,66 @@
-# Nabil El Bajdi's Resume 
+# Resume template
 
-*This repository contains my personal resume built using a Jekyll template. I forked the original template from [resume-template](https://github.com/jglovier/resume-template) and personalized it, as well as adding several DevOps integrations.*
+*A simple Jekyll + GitHub Pages powered resume template.*
 
-## Table of Contents
-- [About](#about)
-- [Features](#features)
-- [DevOps Integrations](#devops-integrations)
+![img](images/screenshot.png)
 
-## About
-This is a simple personal resume website. The website is built using Jekyll and hosted on GitHub Pages. It showcases my professional experience, education, skills, and achievements.
+## Docs
 
-## Features
-- **Responsive Design**: The website is fully responsive and looks great on all devices.
-- **Easy Customization**: Built with Jekyll, it's easy to update and customize content.
-- **DevOps Integrations**: Includes various DevOps practices to improve quality, security, and performance.
+### Running locally
 
-## DevOps Integrations
-This project includes several DevOps practices to enhance the quality, security, and performance of the website.
+To test locally, run the following in your terminal:
 
-The CI/CD pipeline is automated using GitHub Actions. The pipeline includes the following steps:
+1. Clone repo locally
+1. `bundle install`
+2. `bundle exec jekyll serve`
+3. Open your browser to `localhost:4000`
 
-- **Building the Docker Image**: Ensures a consistent environment for the application.
-- **Running Docker Container**: Validates the containerized application.
-- **Security Audit**: Uses `bundler-audit` to check for vulnerabilities in dependencies.
-- **Link Validation**: Ensures all links are valid using `html-proofer`.
-- **Lighthouse Audit**: Monitors performance and best practices of the website.
+### Running locally with Docker
 
+To test locally with docker, run the following in your terminal after installing docker into your system:
+
+1. `docker image build -t resume-template .`
+2. `docker run --rm --name resume-template -v "$PWD":/home/app --network host resume-template`
+
+### Customizing
+
+First you'll want to fork the repo to your own account. Then clone it locally and customize, or use the GitHub web editor to customize.
+
+#### Options/configuration
+
+Most of the basic customization will take place in the `/_config.yml` file. Here is a list of customizations available via `/_config.yml`:
+
+[...write these out...]
+
+#### Editing content
+
+Most of the content configuration will take place in the `/_layouts/resume.html` file. Simply edit the markup there accordingly
+
+### Publishing to GitHub Pages for free
+
+[GitHub Pages](https://pages.github.com/) will host this for free with your GitHub account. Just make sure you're using a `gh-pages` branch, and the site will automatically be available at `yourusername.github.io/resume-template` (you can rename the repo to resume for your own use if you want it to be available at `yourusername.github.io/resume`). You can also add a CNAME if you want it to be available at a custom domain...
+
+### Configuring with your own domain name
+
+To setup your GH Pages site with a custom domain, [follow the instructions](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/) on the GitHub Help site for that topic.
+
+### Themes
+
+Right now resume-template only has one theme. More are coming :soon: though. :heart:
+
+## Roadmap
+
+A feature roadmap is [available here](https://github.com/jglovier/resume-template/projects/1). If you features suggestions, please [open a new issue](https://github.com/jglovier/resume-template/issues/new).
+
+## Contributing
+
+If you spot a bug, or want to improve the code, or even make the dummy content better, you can do the following:
+
+1. [Open an issue](https://github.com/jglovier/resume-template/issues/new) describing the bug or feature idea
+2. Fork the project, make changes, and submit a pull request
+
+## License
+
+The code and styles are licensed under the MIT license. [See project license.](LICENSE) Obviously you should not use the content of this demo repo in your own resume. :wink:
+
+Disclaimer: Use of Lisa M. Simpson image and name used under [Fair Use](https://en.wikipedia.org/wiki/Fair_use) for educational purposes. Project license does not apply to use of this material.
