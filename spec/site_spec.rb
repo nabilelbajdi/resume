@@ -11,8 +11,7 @@ RSpec.describe 'Resume Site' do
   end
 
   it 'contains the contact me button' do
-    # Update the selector based on your HTML structure
-    expect(@doc.at_css('a.button')).not_to be_nil
+    expect(@doc.at_css('a.contact-button')).not_to be_nil
   end
 
   it 'contains the correct job experiences' do
